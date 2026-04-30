@@ -1,12 +1,15 @@
 function About() {
     return (
         <div className="h-svh pt-16 px-4 sm:px-16 lg:px-64">
-            <p className="text-7xl mb-4">Dang Nguyen</p>
-            <p className="text-xl underline">
+            <p className="text-7xl mb-4">
+                <strong>Dang Nguyen</strong>
+            </p>
+            <p className="text-xl underline mb-2">
                 Full-Stack Software Engineer | React
             </p>
-            <br />
-            <p>Skills:</p>
+            <p className="text-xl">Location:</p>
+            <p className="ml-4">Halifax, Nova Scotia</p>
+            <p className="text-xl">Skills:</p>
             <p className="ml-4">
                 &gt; Proficient: JavaScript, React, Flutter/Dart
             </p>
@@ -17,7 +20,7 @@ function About() {
                 &gt; Tools and Technology: GitHub, Docker, Azure
             </p>
             <br />
-            <p>Education:</p>
+            <p className="text-xl">Education:</p>
             <p className="ml-4">
                 &gt; <strong>Nova Scotia Community College</strong>, Halifax,
                 Nova Scotia
