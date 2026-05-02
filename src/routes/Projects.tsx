@@ -37,7 +37,7 @@ function Projects() {
     };
 
     return (
-        <div className="min-h-svh flex justify-center items-center px-4 sm:px-16 lg:px-64 fade-in">
+        <div className="min-h-svh flex justify-center items-center pt-16 pb-32 px-4 sm:px-16 lg:px-64 fade-in">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                 {projectList.map((e) => {
                     return (

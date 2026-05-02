@@ -27,19 +27,23 @@ function Navbar() {
                 <nav className="flex max-w-full gap-1 sm:gap-4">
                     {routes.map((e) => {
                         var extraClass = "mt-2 hover:-translate-y-[2px] ";
+                        const index = routes.indexOf(e);
                         if (location === e[0]) {
                             extraClass = "mb-2";
                         }
                         return (
-                            <div
-                                className={
-                                    "transition-all duration-300 border rounded-full px-2 " +
-                                    extraClass
-                                }
-                                key={routes.indexOf(e)}
-                            >
-                                <Link to={e[0]}>{e[1]}</Link>
-                            </div>
+                            <>
+                                {index !== 0 ? "|" : ""}
+                                <div
+                                    className={
+                                        "transition-all duration-300 underline " +
+                                        extraClass
+                                    }
+                                    key={index}
+                                >
+                                    <Link to={e[0]}>{e[1]}</Link>
+                                </div>
+                            </>
                         );
                     })}
                 </nav>
