@@ -1,7 +1,14 @@
+import { useScrollNavigation } from "../hooks/useScrollNavigation";
+
 function About() {
+    useScrollNavigation({
+        nextRoute: "/contacts",
+        prevRoute: "/projects",
+    });
+
     return (
         <div className="h-svh pt-16 px-4 sm:px-16 lg:px-64">
-            <p className="text-7xl mb-4">
+            <p className="text-7xl mb-4 fade-in">
                 <strong>Dang Nguyen</strong>
             </p>
             <p className="text-xl underline mb-2">

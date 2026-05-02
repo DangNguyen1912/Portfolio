@@ -1,6 +1,13 @@
+import { useScrollNavigation } from "../hooks/useScrollNavigation";
+
 function Home() {
+    useScrollNavigation({
+        nextRoute: "/projects",
+        prevRoute: "contacts",
+    });
+
     return (
-        <div className="min-h-svh flex flex-col justify-center px-4 sm:px-16 lg:px-64">
+        <div className="min-h-svh flex flex-col justify-center px-4 sm:px-16 lg:px-64 fade-in">
             <p className="text-7xl mb-6">Dang Nguyen</p>
             <strong className="text-xl mb-2">
                 Full-Stack Software Engineer | React

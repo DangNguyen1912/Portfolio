@@ -1,3 +1,5 @@
+import { useScrollNavigation } from "../hooks/useScrollNavigation";
+
 function Projects() {
     const projectList = [
         [
@@ -9,11 +11,20 @@ function Projects() {
             "https://dangnguyen1912.github.io/Flutter-Calculator-App/",
         ],
     ];
+
+    useScrollNavigation({
+        nextRoute: "/about",
+        prevRoute: "/",
+    });
+
     return (
-        <div className="min-h-svh flex justify-center items-center px-4 sm:px-16 lg:px-64">
+        <div className="min-h-svh flex justify-center items-center px-4 sm:px-16 lg:px-64 fade-in">
             {projectList.map((e) => {
                 return (
-                    <div className="border rounded-full px-2 m-2 flex justify-center">
+                    <div
+                        className="border rounded-full px-2 m-2 flex justify-center"
+                        key={projectList.indexOf(e)}
+                    >
                         <a
                             href={e[1]}
                             target="_blank"
